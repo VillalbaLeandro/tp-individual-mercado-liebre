@@ -12,20 +12,23 @@
 
 * {
     margin: 0px;
+    padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #ebebeb;
+}
+
 
 img {
     width: 100%;
 }
 
-/* box shadow por defecto para las cards
--webkit-box-shadow: 10px 11px 3px -10px rgba(106,106,106,0.24);
--moz-box-shadow: 10px 11px 3px -10px rgba(106,106,106,0.24);
-box-shadow: 10px 11px 3px -10px rgba(106,106,106,0.24); */
 
 html {
     font-family: 'Roboto', sans-serif;
+
 }
 
 header {
@@ -33,21 +36,16 @@ header {
     background: #EAC926;
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 8px;
     top: 0;
     left: 0;
     right: 0;
 
 }
 
-/* .logo-container{
-    border: 3px solid red;
-
-} */
-
 .logo {
     /* border: 3px solid salmon; */
-    width: 40%;
+    width: 50%;
     max-width: 200px;
 
 }
@@ -62,7 +60,7 @@ header {
 .search-button-container {
     /* border: 3px solid salmon; */
     display: flex;
-    width: 60%;
+    width: 50%;
     align-items: center;
     justify-content: center;
 }
@@ -73,7 +71,7 @@ header {
     height: 30px;
     width: 90%;
     /* shadow de mercadoLibre */
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
 }
 
 .input-search {
@@ -96,10 +94,6 @@ header {
     color: #6e6e6e;
 }
 
-/* .aceptamos-todas-las-tarjetas-container{
-    border: 3px solid grey;
-} */
-
 .burguer-container {
     /* border: 3px solid red; */
     display: flex;
@@ -120,24 +114,99 @@ header {
 .menu-container {
     /* border: 3px solid red; */
     display: none;
-    color: #333;
-    font-weight: 500;
+
 
 
 }
 
 .card-title-aceptamos-tarjetas {
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 400;
     margin: 5px 0px;
     color: #242424;
 }
+
 /* MAIN  */
-main{
-    margin: center;
+
+main {
+    margin: auto;
     width: 90%;
-    
+}
+
+.cards-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.img-container {
+    background-color: white;
+}
+
+.article-container {
+    margin: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    position: relative;
+    max-width: 240px;
+    width: 100%;
+
+}
+
+.titulares h3{
+    font-size: 20px;
+    color: #636363
+}
+
+.precio-descuento-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.precio {
+    font-size: 18px;
+}
+
+.precio-container {
+    margin-right: 4%;
+
+}
+
+.descuento-container {
+    width: 70%;
+    color: #00a650;
+}
+
+.descripcion-container {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    background-color: white;
+    position: relative;
+}
+
+.description {
+    display: none;
+}
+
+.descuento,
+.description {
+    font-size: 16px;
+}
+
+.icon-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #00a650;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 7px;
+    top: -17px;
+    color: #00a650;
+
 }
 
 
@@ -155,25 +224,79 @@ footer i {
     font-size: 25px;
     margin: 6px;
 }
-.icons-text-footer{
+
+.icons-text-footer {
     margin-bottom: 20px;
 }
-.subtitulos-cuerposDeTexto{
+
+.subtitulos-cuerposDeTexto {
     font-size: 14px;
 }
-.cuerposDeTexto{
+
+.cuerposDeTexto {
     font-size: 10px;
 }
 
-@media (min-width: 768px) {
-    .logo {
-
-        width: 30%;
-        margin-left: 10px;
+/* ------------------- media query 361 ----------------------- */
+@media (min-width: 361px) {
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2px;
     }
 
-    .logo-container-search {
-        flex-direction: row;
+    .aceptamos-todas-las-tarjetas-container {
+        width: 168px;
+        font-size: 8px;
+    }
+
+    ul {
+        display: flex;
+        font-size: 8.7px;
+        justify-content: space-between;
+
+
+
+    }
+
+    ul li {
+        margin: 0px 1.5px;
+    }
+
+    .titulares{
+        font-size: 24px;
+    }
+
+    .icon-truck{
+        top: -13px;
+        padding: 5px 4px 4px 3px;
+        width: 24px;
+        height: 24px;
+        font-size: 13px;
+
+    }
+    
+    .descripcion-container{
+        padding: 8px;
+    }
+
+    .precio{
+        font-size: 16px;
+    }
+
+    .description {
+        display: block;
+        color: #666;
+        
+    }
+    .descuento, .description{
+        font-size: 10px;
+
+    }
+    .article-container {
+        box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.46);
+        width: 40%;
     }
 
     .burguer-container {
@@ -182,35 +305,118 @@ footer i {
 
     .menu-container {
         display: block;
+        color: #333;
+        font-weight: 300;
         display: flex;
         justify-content: space-between;
-        padding: 0px 10px;
 
     }
 
-    ul {
-        /* border: 3px blue solid; */
-        display: flex;
-        padding: 0%;
-        width: 50%;
-        font-size: 14px;
+    /* ------------------- media query 769 ----------------------- */
+
+}
+
+@media (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        justify-content: none;
+        align-items: none;
+
+    }
+
+    .logo {
+        width: 60%;
+        position: relative;
+        left: -11px;
+
+    }
+
+    .logo-container {
         justify-content: space-evenly;
-        margin-bottom: 5px;
 
+    }
 
+    .logo-bar-container {
+        width: 470px;
+    }
+
+    .logo-container-search {
+        flex-direction: row;
+    }
+
+    .aceptamos-todas-las-tarjetas-container {
+        position: relative;
+        top: 2px;
+        left: 20px;
     }
 
     .card-title-aceptamos-tarjetas {
-
-        font-size: 17px;
+        font-size: 12px;
         margin-bottom: 10px;
-        margin-top: 0;
+        width: 258px;
+        position: absolute;
+        top: -14px;
+        left: -85px;
+
+
+    }
+
+    .menu-container {
+        padding: 0px 20px;
+        margin-top: 4px;
+    }
+
+    ul {
+        font-size: 12px;
+    }
+
+    ul li {
+        margin: 0px 8px;
+    }
+
+    .search-button-container {
+        width: 100%;
+        justify-content: flex-end;
+        position: relative;
+        left: -30px;
+        width: 900px;
+    }
+
+    .article-container {
+        width: 22%;
+    }
+
+    .icon-truck {
+        top: -13px;
+        padding: 5px 4px 4px 3.6px;
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+
+    .precio {
+        font-size: 15px;
+    }
+
+    .descuento,
+    .description {
+        font-size: 11px;
+    }
+
+    .conteiner-footer-items {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .icon-text-conteiner {
+        width: 220px;
+    }
+
+    .descripcion-container {
+        padding: 10px;
     }
 
 
 }
-
-
-
-
-
