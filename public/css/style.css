@@ -20,11 +20,11 @@ body {
     background-color: #ebebeb;
 }
 
-
 img {
     width: 100%;
-}
+    
 
+}
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -77,8 +77,8 @@ header {
 .input-search {
     width: 95%;
     border: none;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 
 
 }
@@ -127,21 +127,18 @@ header {
     color: #242424;
 }
 
-/* MAIN  */
+/* ----------------MAIN ------------------------ */
 
 main {
     margin: auto;
     width: 90%;
 }
 
+
 .cards-conteiner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-.img-container {
-    background-color: white;
 }
 
 .article-container {
@@ -150,12 +147,24 @@ main {
     position: relative;
     max-width: 240px;
     width: 100%;
+    border-radius: 3px;
 
 }
+.img-container {
+    background-color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.img-container img{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
 
 .titulares h3{
-    font-size: 20px;
-    color: #636363
+    font-size: 19px;
+    color: #636363;
+    font-weight: 300;
 }
 
 .precio-descuento-container {
@@ -182,6 +191,8 @@ main {
     padding: 15px;
     background-color: white;
     position: relative;
+        border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .description {
@@ -210,7 +221,7 @@ main {
 }
 
 
-/* FOOTER */
+/* ---------------FOOTER------------------- */
 
 footer {
     color: #242424;
@@ -237,7 +248,7 @@ footer i {
     font-size: 10px;
 }
 
-/* ------------------- media query 361 ----------------------- */
+/* ------------------- media queries 361 ----------------------- */
 @media (min-width: 361px) {
     .logo-container {
         display: flex;
@@ -248,6 +259,9 @@ footer i {
 
     .aceptamos-todas-las-tarjetas-container {
         width: 168px;
+       
+    }
+    .card-title-aceptamos-tarjetas{
         font-size: 8px;
     }
 
@@ -311,20 +325,58 @@ footer i {
         justify-content: space-between;
 
     }
+    ul li a{
+        text-decoration: none;
+        color: black;
 
-    /* ------------------- media query 769 ----------------------- */
+    }
+
+    ul li a:hover{
+        text-decoration: underline;
+        color:#2a64a1;
+        font-size: 103%;
+        cursor: pointer;
+
+    }
+    ul li a:visited{
+        text-decoration: underline;
+        color: purple;
+    }
+    ul li a:active{
+        text-decoration: underline;
+        color: #09669f;
+
+    }
+    
+
+
+
+
+/* ------------------- media queries 550xpx----------------------- */
+
+@media (min-width: 550px){
+    ul {
+        font-size: 11px;
+    }
+    .card-title-aceptamos-tarjetas{
+        font-size: 9px;
+    }
+  .logo img{
+    width: 105%;
+  }
+  .search-button-container{
+    width: 130%;
+  }   
+}
+
+
+
+    /* ------------------- media queries 769 ----------------------- */
 
 }
 
 @media (min-width: 768px) {
-    * {
-        margin: 0;
-        padding: 0;
-        justify-content: none;
-        align-items: none;
-
-    }
-
+   
     .logo {
         width: 60%;
         position: relative;
