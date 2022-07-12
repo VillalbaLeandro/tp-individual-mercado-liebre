@@ -22,7 +22,7 @@ body {
 
 img {
     width: 100%;
-    
+
 
 }
 
@@ -40,7 +40,26 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    position: fixed;
+    z-index: 10;
 
+}
+
+header input {
+    padding: 0px 6px;
+
+}
+
+
+input:hover {
+    border: 2px solid rgb(233, 145, 51);
+
+}
+
+
+.margen-para-header-fixed {
+    margin-top: 27%;
+    opacity: 0;
 }
 
 .logo {
@@ -150,18 +169,20 @@ main {
     border-radius: 3px;
 
 }
+
 .img-container {
     background-color: white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-.img-container img{
+
+.img-container img {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
 
 
-.titulares h3{
+.titulares h3 {
     font-size: 19px;
     color: #636363;
     font-weight: 300;
@@ -191,7 +212,7 @@ main {
     padding: 15px;
     background-color: white;
     position: relative;
-        border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
 
@@ -217,8 +238,16 @@ main {
     right: 7px;
     top: -17px;
     color: #00a650;
+    transition: transform 200ms ease-in;
 
 }
+
+.icon-truck:hover {
+    transform: rotate(-90deg);
+
+}
+
+
 
 
 /* ---------------FOOTER------------------- */
@@ -236,6 +265,10 @@ footer i {
     margin: 6px;
 }
 
+footer i:hover {
+    color: #0022AA;
+}
+
 .icons-text-footer {
     margin-bottom: 20px;
 }
@@ -250,6 +283,32 @@ footer i {
 
 /* ------------------- media queries 361 ----------------------- */
 @media (min-width: 361px) {
+    .margen-para-header-fixed {
+        margin-top: 8%;
+    }
+
+    .logo-mercado-liebre {
+        width: 80%;
+        margin-left: 14%;
+    }
+
+    .search-container {
+        height: 19px;
+        width: 100%;
+    }
+
+
+    .search-container input::placeholder {
+        font-size: 8px;
+    }
+
+    .button i {
+        font-size: 10px;
+
+
+    }
+
+
     .logo-container {
         display: flex;
         align-items: center;
@@ -259,9 +318,10 @@ footer i {
 
     .aceptamos-todas-las-tarjetas-container {
         width: 168px;
-       
+
     }
-    .card-title-aceptamos-tarjetas{
+
+    .card-title-aceptamos-tarjetas {
         font-size: 8px;
     }
 
@@ -278,11 +338,11 @@ footer i {
         margin: 0px 1.5px;
     }
 
-    .titulares{
+    .titulares {
         font-size: 24px;
     }
 
-    .icon-truck{
+    .icon-truck {
         top: -13px;
         padding: 5px 4px 4px 3px;
         width: 24px;
@@ -290,27 +350,41 @@ footer i {
         font-size: 13px;
 
     }
-    
-    .descripcion-container{
+
+    .descripcion-container {
         padding: 8px;
     }
 
-    .precio{
+    .precio {
         font-size: 16px;
     }
 
     .description {
         display: block;
+        opacity: 0;
+        position: absolute;
         color: #666;
-        
+        transition: opacity 1s, position 1s;
     }
-    .descuento, .description{
+
+    .description:hover {
+        opacity: 100%;
+        position: relative;
+    }
+
+    .descuento,
+    .description {
         font-size: 10px;
 
     }
+
     .article-container {
-        box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.46);
         width: 40%;
+        box-shadow: none;
+    }
+
+    .article-container:hover {
+        box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.46);
     }
 
     .burguer-container {
@@ -325,49 +399,66 @@ footer i {
         justify-content: space-between;
 
     }
-    ul li a{
+
+    ul li a {
         text-decoration: none;
         color: black;
 
     }
 
-    ul li a:hover{
+    ul li a:hover {
         text-decoration: underline;
-        color:#2a64a1;
+        color: #2a64a1;
         font-size: 103%;
         cursor: pointer;
 
     }
-    ul li a:visited{
+
+    ul li a:visited {
         text-decoration: underline;
         color: purple;
     }
-    ul li a:active{
+
+    ul li a:active {
         text-decoration: underline;
         color: #09669f;
 
     }
-    
 
 
 
 
-/* ------------------- media queries 550xpx----------------------- */
 
-@media (min-width: 550px){
-    ul {
-        font-size: 11px;
+    /* ------------------- media queries 550xpx----------------------- */
+
+    @media (min-width: 550px) {
+        .margen-para-header-fixed {
+            margin-top: 5%;
+        }
+
+        ul {
+            font-size: 11px;
+        }
+
+        .card-title-aceptamos-tarjetas {
+            font-size: 9px;
+        }
+
+        .logo img {
+            width: 90%;
+            position: relative;
+            left: 10px;
+        }
+
+        .search-button-container {
+            width: 130%;
+        }
+        .search-container{
+            width: 89%;
+            position: relative;
+            left: 16px;
+        }
     }
-    .card-title-aceptamos-tarjetas{
-        font-size: 9px;
-    }
-  .logo img{
-    width: 105%;
-  }
-  .search-button-container{
-    width: 130%;
-  }   
-}
 
 
 
@@ -376,13 +467,23 @@ footer i {
 }
 
 @media (min-width: 768px) {
-   
+    .margen-para-header-fixed {
+        margin-top: 5%;
+    }
+
     .logo {
         width: 60%;
         position: relative;
-        left: -11px;
+        left: 7px;
 
     }
+
+    .logo img {
+        width: 100%;
+        left: 3px;
+    }
+
+    ;
 
     .logo-container {
         justify-content: space-evenly;
@@ -401,16 +502,16 @@ footer i {
         position: relative;
         top: 2px;
         left: 20px;
+        width: 170px;
     }
 
     .card-title-aceptamos-tarjetas {
-        font-size: 12px;
+        font-size: 10px;
         margin-bottom: 10px;
-        width: 258px;
+        width: 217px;
         position: absolute;
-        top: -14px;
-        left: -85px;
-
+        top: -11px;
+        left: -8px;
 
     }
 
@@ -431,8 +532,11 @@ footer i {
         width: 100%;
         justify-content: flex-end;
         position: relative;
-        left: -30px;
-        width: 900px;
+        left: 12px;
+        width: 980px;
+    }
+    .search-container{
+        left: -12px;
     }
 
     .article-container {
@@ -473,5 +577,8 @@ footer i {
 
 }
 
-
-
+@media (min-width: 900px){
+    .margen-para-header-fixed {
+        margin-top: 3%;
+    }
+}

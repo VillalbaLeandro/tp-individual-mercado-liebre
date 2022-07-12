@@ -8,43 +8,36 @@
 
 .formulario-container{
     width: 90%;
-    background-color: #666;
+    background-color: #fff;
     padding: 26px;
     margin: auto;
     margin-top: 25px;
     border-radius: 4px;
     font-family: "Roboto", sans-serif;
-    color: white;
+    color: #666;
     max-width: 400px;
-    box-shadow: 6px 5px 6px 0px rgb(0 0 0 / 37%)
+    box-shadow: 6px 5px 6px 0px rgb(0 0 0 / 37%);
  }
 
+
 main input{
-    background-color: #252324;
+    background-color: #ebebee;
     font-size: 12px;
-    color: white;
-    border: 2px solid #017bae;
+   color: rgb(133, 131, 131);
+    border: none;
     
 
-}
-header input:hover{
-    border: 2px solid rgb(233, 145, 51);
-
-}
-main input:hover{
-    border: 2px solid black;
-    
 }
 
  ::placeholder{
-    color: rgb(183, 183, 183);
+    color: rgb(133, 131, 131);
     font-size: 11px;
     
 }
 .titulo-register-conteiner{
     display: flex;
     justify-content: center;
-    border-bottom: 3px white solid;
+    border-bottom: 3px #eac926 solid;
     margin-bottom: 14px;
     padding-bottom: 5px;
     font-family: sans-serif;
@@ -52,12 +45,11 @@ main input:hover{
 
 .titulos-boxs{
     font-size: 11px;
-    color: #cfcbcb;
+    color: #5e5b5b;
     font-weight: 500;
 }
 .text-boxs{
     width: 100%;
-    height: 29px;
     border-radius: 4px;
     padding: 8px;
 }
@@ -65,22 +57,28 @@ main input:hover{
     display: flex;
     justify-content: space-around;
     margin: 7px;
+    margin-top: 20px;
 }
 .buttons input{
     width: 30%;
     font-size: 8px;
     border-radius: 7px;
     height: 22px;
-    background: #017bae;
+    background: #09669f;
+    color: white
+    
+
 }
 
 .file-select .file{
     width: 124px;
+    margin-bottom: 10px;
 }
 .checkbox{
     font-size: 10px;
     margin: 11px 0px;
-    color: #cfcbcb;
+    color: #5e5b5b;
+
 
 }
 .redirec-login{

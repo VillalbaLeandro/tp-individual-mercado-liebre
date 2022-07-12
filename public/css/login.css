@@ -1,0 +1,64 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.formulario-login{
+    width: 90%;
+    background-color: #fff;
+    padding: 26px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    color: #666;
+    max-width: 400px;
+    box-shadow: 6px 5px 6px 0px rgb(0 0 0 / 37%);
+}
+
+.conteiner-footer-items{
+    margin-top: 30px;
+}
+main input{
+    background-color: #ebebee;
+    font-size: 12px;
+   color: rgb(133, 131, 131);
+    border: none;
+    
+
+}
+.titulos-boxs{
+    font-size: 11px;
+    color: #5e5b5b;
+    font-weight: 500;
+}
+.text-boxs{
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 7px;
+    margin-top: 20px;
+}
+.buttons input{
+    width: 30%;
+    font-size: 8px;
+    border-radius: 7px;
+    height: 22px;
+    background:#09669f;
+    color: white
+    
+
+}
+.buttons input:hover{
+    background-color: #0022AA;
+}
+.contenedor-titulos-boxs{
+    margin-bottom: 20px;
+ }
+
+
