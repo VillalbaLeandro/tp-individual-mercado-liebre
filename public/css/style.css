@@ -47,7 +47,7 @@ header {
 
 header input {
     padding: 0px 6px;
-
+    transition: border 150ms;
 }
 
 
@@ -66,7 +66,14 @@ input:hover {
     /* border: 3px solid salmon; */
     width: 50%;
     max-width: 200px;
+}
+.logo img{
+   transition: width 450ms;
 
+}
+.logo img:hover{
+    width: 105%;
+  
 }
 
 .logo-bar-container {
@@ -238,7 +245,7 @@ main {
     right: 7px;
     top: -17px;
     color: #00a650;
-    transition: transform 200ms ease-in;
+    transition: transform 300ms ease-in;
 
 }
 
@@ -263,6 +270,7 @@ footer i {
     color: #09669f;
     font-size: 25px;
     margin: 6px;
+    transition: color 450ms;
 }
 
 footer i:hover {
@@ -364,7 +372,7 @@ footer i:hover {
         opacity: 0;
         position: absolute;
         color: #666;
-        transition: opacity 1s, position 1s;
+        transition: opacity 450ms, position 4s;
     }
 
     .description:hover {
@@ -381,6 +389,7 @@ footer i:hover {
     .article-container {
         width: 40%;
         box-shadow: none;
+        transition: box-shadow 450ms;
     }
 
     .article-container:hover {
@@ -403,7 +412,7 @@ footer i:hover {
     ul li a {
         text-decoration: none;
         color: black;
-
+        transition: text-decoration 1s, color 450ms, font-size 450ms;
     }
 
     ul li a:hover {
