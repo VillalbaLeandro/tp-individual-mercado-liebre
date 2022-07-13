@@ -50,7 +50,9 @@ header input {
     transition: border 150ms;
 }
 
-
+input{
+    transition: border 200ms;
+}
 input:hover {
     border: 2px solid rgb(233, 145, 51);
 
