@@ -292,7 +292,7 @@ footer i:hover {
 }
 
 /* ------------------- media queries 361 ----------------------- */
-@media (min-width: 361px) {
+@media (min-width: 360px) {
     .margen-para-header-fixed {
         margin-top: 8%;
     }
